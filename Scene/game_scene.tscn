@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cp5c8xbailsfe"]
 
-[ext_resource type="PackedScene" uid="uid://cuuwliappyehq" path="res://Scene/player.tscn" id="1_e32lr"]
+[ext_resource type="PackedScene" uid="uid://cuuwliappyehq" path="res://Player/player.tscn" id="1_e32lr"]
 [ext_resource type="PackedScene" uid="uid://bj2vnmc6uc8s6" path="res://Map/room.tscn" id="1_s60wc"]
 
 [sub_resource type="GDScript" id="GDScript_e32lr"]

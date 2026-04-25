@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bc23k6hhrg87u"]
+[gd_scene format=3 uid="uid://ys0p417o0b4p"]
 
-[ext_resource type="Script" path="res://System/Health.gd" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://vujjpnqn6y2s" path="res://System/Health.gd" id="2_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://bkf3wleedpdm8" path="res://Images/Prototype_Character/prototype_character.png" id="2_btcbx"]
 
 [sub_resource type="GDScript" id="GDScript_l8h54"]
