@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cx5fslse520fj"]
+
+[ext_resource type="Texture2D" uid="uid://ds77soa74eeec" path="res://Images/Particles/Complex/circle/rounded_14.png" id="1_epr5s"]
+[ext_resource type="Script" uid="uid://ebbik3yvvbuf" path="res://Enemy/enemy.gd" id="1_vonkd"]
+[ext_resource type="Script" uid="uid://vujjpnqn6y2s" path="res://System/Health.gd" id="2_vonkd"]
+
+[sub_resource type="Gradient" id="Gradient_vso2s"]
+offsets = PackedFloat32Array(0, 0.77710843, 1)
+colors = PackedColorArray(1.224127, 1.224127, 0.23039952, 1, 0.5830635, 0.58208424, 3.85046e-07, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fkela"]
+gradient = SubResource("Gradient_vso2s")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_epr5s"]
+
+[node name="Enemy" type="Area2D" unique_id=242564172]
+script = ExtResource("1_vonkd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1938994094]
+modulate = Color(1, 1, 0.4117647, 1)
+scale = Vector2(0.05078125, 0.05078125)
+texture = ExtResource("1_epr5s")
+
+[node name="Health" type="Node" parent="." unique_id=204568649]
+script = ExtResource("2_vonkd")
+metadata/_custom_type_script = "uid://vujjpnqn6y2s"
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1809348569]
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_fkela")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=328624642]
+shape = SubResource("CircleShape2D_epr5s")

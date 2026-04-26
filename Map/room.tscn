@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bj2vnmc6uc8s6"]
 
 [ext_resource type="Texture2D" uid="uid://cowvhoicvcu5n" path="res://Images/DungeonStarter/DungeonStarter.png" id="1_y0es3"]
+[ext_resource type="Script" uid="uid://vbxbu5p1bhtw" path="res://Map/spawn.gd" id="2_3ajt3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y0es3"]
 texture = ExtResource("1_y0es3")
@@ -193,23 +194,6 @@ texture = ExtResource("1_y0es3")
 [sub_resource type="TileSet" id="TileSet_o12pq"]
 sources/0 = SubResource("TileSetAtlasSource_3ajt3")
 
-[sub_resource type="Gradient" id="Gradient_y0es3"]
-offsets = PackedFloat32Array(0, 0.8373494, 1)
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_3ajt3"]
-gradient = SubResource("Gradient_y0es3")
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y0es3"]
-
-[sub_resource type="Gradient" id="Gradient_gte0b"]
-offsets = PackedFloat32Array(0, 0.8373494, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0.8373494, 0.8373494, 0.8373494, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_o12pq"]
-gradient = SubResource("Gradient_gte0b")
-metadata/_snap_enabled = true
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o12pq"]
 size = Vector2(15, 19)
 
@@ -222,7 +206,113 @@ size = Vector2(14, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3vp7"]
 size = Vector2(127, 16)
 
-[sub_resource type="TileSet" id="TileSet_kcpnl"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gte0b"]
+texture = ExtResource("1_y0es3")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+5:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+5:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+5:13/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+1:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_iqvem"]
+sources/0 = SubResource("TileSetAtlasSource_gte0b")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y0es3"]
+
+[sub_resource type="Gradient" id="Gradient_gte0b"]
+offsets = PackedFloat32Array(0, 0.8373494, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.8373494, 0.8373494, 0.8373494, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o12pq"]
+gradient = SubResource("Gradient_gte0b")
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_y0es3"]
+offsets = PackedFloat32Array(0, 0.8373494, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3ajt3"]
+gradient = SubResource("Gradient_y0es3")
 
 [node name="Room" type="Node2D" unique_id=491965579]
 
@@ -248,17 +338,43 @@ shape = SubResource("RectangleShape2D_3ajt3")
 position = Vector2(7, -249)
 shape = SubResource("RectangleShape2D_y0es3")
 
-[node name="Doors" type="TileMapLayer" parent="." unique_id=1069102790]
-tile_map_data = PackedByteArray("AAD0/xAAAAAAAAQAAAD1/xAAAAABAAQAAAD2/xAAAAABAAQAAAD3/xAAAAABAAQAAAD4/xAAAAABAAQAAAD5/xAAAAACAAQAAAD4/w8AAAABAA8AAAD3/w8AAAABAA8AAAD2/w8AAAABAA8AAAD1/w8AAAABAA8AAAAIABAAAAABAAQAAAAJABAAAAABAAQAAAAKABAAAAABAAQAAAAHABAAAAABAAQAAAAHAA8AAAABAA8AAAAIAA8AAAABAA8AAAAJAA8AAAABAA8AAAAKAA8AAAABAA8AAAAGABAAAAAAAAQAAAALABAAAAACAAQAAADw////AAAAAAUAAADw/wAAAAAAAAUAAAAQAP//AAABAAYAAAAQAAAAAAABAAYAAAD//xAAAAAFAAQAAAAAABAAAAAFAAQAAAAAAPD/AAAFAAEAAAD///D/AAAFAAEAAAD///H/AAAFAAIAAAAAAPH/AAAFAAIAAAD//w8AAAAFAAMAAAAAAA8AAAAFAAMAAADx////AAABAAUAAADx/wAAAAABAAUAAAAPAP//AAAAAAYAAAD///L/AAADAAoAAAAAAPL/AAADAAoAAAABAPL/AAADAAoAAAD+//L/AAADAAoAAAACAPL/AAADAAoAAAD8//L/AAACAAoAAAADAPL/AAAEAAoAAAADAPP/AAAEAAsAAAADAPT/AAAEAAsAAAD8//P/AAACAAsAAAD8//T/AAACAAsAAAD8//X/AAACAAsAAAADAPX/AAAEAAsAAAD8//b/AAACAAwAAAADAPb/AAAEAAwAAAD9//b/AAADAAwAAAD+//b/AAACAA0AAAABAPb/AAADAA0AAAACAPb/AAADAAwAAAD///f/AAAFAAkAAAAAAPf/AAAFAAkAAAAAAPb/AAAFAAgAAAD///b/AAAFAAgAAAABAPf/AAADAA4AAAD+//f/AAACAA4AAAD9//f/AAAEAA8AAAACAPf/AAAEAA8AAAD8//f/AAADAA8AAAADAPf/AAADAA8AAAD9//L/AAADAAoAAAA=")
+[node name="wallCrystal" type="TileMapLayer" parent="." unique_id=1069102790]
+tile_map_data = PackedByteArray("AAAHAA8AAAABABAAAAAIAA8AAAABABAAAAAJAA8AAAABABAAAAAKAA8AAAABABAAAAAGABAAAAAAAAQAAAALABAAAAACAAQAAADw////AAAAAAUAAADw/wAAAAAAAAUAAAAQAP//AAABAAYAAAAQAAAAAAABAAYAAAD//xAAAAAFAAQAAAAAABAAAAAFAAQAAAAAAPD/AAAFAAEAAAD///D/AAAFAAEAAAD///H/AAAFAAIAAAAAAPH/AAAFAAIAAAD//w8AAAAFAAMAAAAAAA8AAAAFAAMAAADx////AAABAAUAAADx/wAAAAABAAUAAAAPAP//AAAAAAYAAAD///L/AAADAAoAAAAAAPL/AAADAAoAAAABAPL/AAADAAoAAAD+//L/AAADAAoAAAACAPL/AAADAAoAAAD8//L/AAACAAoAAAADAPL/AAAEAAoAAAADAPP/AAAEAAsAAAADAPT/AAAEAAsAAAD8//P/AAACAAsAAAD8//T/AAACAAsAAAD8//X/AAACAAsAAAADAPX/AAAEAAsAAAD8//b/AAACAAwAAAADAPb/AAAEAAwAAAD9//b/AAADAAwAAAD+//b/AAACAA0AAAABAPb/AAADAA0AAAACAPb/AAADAAwAAAD///f/AAAFAAkAAAAAAPf/AAAFAAkAAAAAAPb/AAAFAAgAAAD///b/AAAFAAgAAAABAPf/AAADAA4AAAD+//f/AAACAA4AAAD9//f/AAAEAA8AAAACAPf/AAAEAA8AAAD8//f/AAADAA8AAAADAPf/AAADAA8AAAD9//L/AAADAAoAAAD0/xAAAAAAAAQAAAD1/w8AAAABABAAAAD2/w8AAAABABAAAAD3/w8AAAABABAAAAD4/w8AAAABABAAAAD5/xAAAAACAAQAAAD1/w4AAAABAA8AAAD2/w4AAAABAA8AAAD3/w4AAAABAA8AAAD4/w4AAAABAA8AAAAHAA4AAAABAA8AAAAIAA4AAAABAA8AAAAJAA4AAAABAA8AAAAKAA4AAAABAA8AAAA=")
 tile_set = SubResource("TileSet_o12pq")
 
-[node name="LeftEntrance" type="PointLight2D" parent="Doors" unique_id=1024363207]
-position = Vector2(-143.16832, 271.667)
-rotation = 1.5707964
-scale = Vector2(1.9895935, 1.03651)
-energy = 7.65
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_3ajt3")
+[node name="StaticBody2D" type="StaticBody2D" parent="wallCrystal" unique_id=71051149]
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="wallCrystal/StaticBody2D" unique_id=826719843]
+position = Vector2(24, -148)
+shape = SubResource("RectangleShape2D_o12pq")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="wallCrystal/StaticBody2D" unique_id=1015573795]
+position = Vector2(-23.5, -147.5)
+shape = SubResource("RectangleShape2D_o12pq")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="wallCrystal/StaticBody2D" unique_id=1408300481]
+position = Vector2(39, -153)
+shape = SubResource("RectangleShape2D_iqvem")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wallCrystal/StaticBody2D" unique_id=1798018359]
+position = Vector2(-39, -152.5)
+shape = SubResource("RectangleShape2D_iqvem")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wallCrystal/StaticBody2D" unique_id=1313268082]
+position = Vector2(57, -179)
+shape = SubResource("RectangleShape2D_f3dae")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wallCrystal/StaticBody2D" unique_id=1141561131]
+position = Vector2(-56, -177)
+shape = SubResource("RectangleShape2D_f3dae")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallCrystal/StaticBody2D" unique_id=1225585139]
+position = Vector2(0.5, -217)
+shape = SubResource("RectangleShape2D_f3vp7")
+
+[node name="Doors" type="TileMapLayer" parent="." unique_id=912364196]
+tile_map_data = PackedByteArray("AAD1/xAAAAABAAQAAAD2/xAAAAABAAQAAAD3/xAAAAABAAQAAAD4/xAAAAABAAQAAAAHABAAAAABAAQAAAAIABAAAAABAAQAAAAJABAAAAABAAQAAAAKABAAAAABAAQAAAA=")
+tile_set = SubResource("TileSet_iqvem")
 
 [node name="RightEntrance" type="PointLight2D" parent="Doors" unique_id=1990031736]
 material = SubResource("CanvasItemMaterial_y0es3")
@@ -269,38 +385,17 @@ energy = 7.65
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_o12pq")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Doors" unique_id=71051149]
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Doors/StaticBody2D" unique_id=826719843]
-position = Vector2(24, -148)
-shape = SubResource("RectangleShape2D_o12pq")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Doors/StaticBody2D" unique_id=1015573795]
-position = Vector2(-23.5, -147.5)
-shape = SubResource("RectangleShape2D_o12pq")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Doors/StaticBody2D" unique_id=1408300481]
-position = Vector2(39, -153)
-shape = SubResource("RectangleShape2D_iqvem")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Doors/StaticBody2D" unique_id=1798018359]
-position = Vector2(-39, -152.5)
-shape = SubResource("RectangleShape2D_iqvem")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Doors/StaticBody2D" unique_id=1313268082]
-position = Vector2(57, -179)
-shape = SubResource("RectangleShape2D_f3dae")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Doors/StaticBody2D" unique_id=1141561131]
-position = Vector2(-56, -177)
-shape = SubResource("RectangleShape2D_f3dae")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/StaticBody2D" unique_id=1225585139]
-position = Vector2(0.5, -217)
-shape = SubResource("RectangleShape2D_f3vp7")
-
-[node name="Objects" type="TileMapLayer" parent="." unique_id=1597375978]
-tile_set = SubResource("TileSet_kcpnl")
+[node name="LeftEntrance" type="PointLight2D" parent="Doors" unique_id=1024363207]
+position = Vector2(-143.16832, 271.667)
+rotation = 1.5707964
+scale = Vector2(1.9895935, 1.03651)
+energy = 7.65
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_3ajt3")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1878729696]
 color = Color(0.44291076, 0.44291076, 0.44291073, 1)
+
+[node name="DoorSpawner" type="Node2D" parent="." unique_id=831534071]
+position = Vector2(0, -255)
+script = ExtResource("2_3ajt3")
