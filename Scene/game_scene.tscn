@@ -1,39 +1,10 @@
 [gd_scene format=3 uid="uid://cp5c8xbailsfe"]
 
-[ext_resource type="PackedScene" uid="uid://cuuwliappyehq" path="res://Player/player.tscn" id="1_e32lr"]
+[ext_resource type="PackedScene" uid="uid://ys0p417o0b4p" path="res://Player/player.tscn" id="1_e32lr"]
 [ext_resource type="PackedScene" uid="uid://bj2vnmc6uc8s6" path="res://Map/room.tscn" id="1_s60wc"]
-
-[sub_resource type="GDScript" id="GDScript_e32lr"]
-script/source = "extends CharacterBody2D
-
-@export var mov_speed:float = 125;
-
-
-var char_direction : Vector2
-
-func _physics_process(_delta):
-	char_direction.x = Input.get_axis(\"move_left\",\"move_right\")    
-	char_direction.y = Input.get_axis(\"move_up\",\"move_down\")    
-
-	if char_direction.x > 0 :%sprite.flip_h = false
-	elif char_direction.x < 0 :%sprite.flip_h = true
-
-
-	if char_direction:
-		velocity = char_direction * mov_speed
-		if %sprite.animation != \"walking\": %sprite.animation = \"walking\"
-	else:
-		velocity = velocity.move_toward(Vector2.ZERO, mov_speed)
-		if %sprite.animation != \"idle\": %sprite.animation = \"idle\" 
-		
-	move_and_slide()   
-		
-	
-"
 
 [node name="game_scene" type="Node2D" unique_id=1628890661]
 
 [node name="Room" parent="." unique_id=491965579 instance=ExtResource("1_s60wc")]
 
 [node name="player" parent="." unique_id=507782529 instance=ExtResource("1_e32lr")]
-script = SubResource("GDScript_e32lr")
