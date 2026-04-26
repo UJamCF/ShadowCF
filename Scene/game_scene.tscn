@@ -9,7 +9,6 @@
 [node name="Room" parent="." unique_id=491965579 instance=ExtResource("1_s60wc")]
 
 [node name="player" parent="." unique_id=507782529 instance=ExtResource("1_e32lr")]
-script = SubResource("GDScript_e32lr")
 mov_speed = 125.0
 
 [node name="Crystal" parent="." unique_id=838350972 instance=ExtResource("3_edujn")]
