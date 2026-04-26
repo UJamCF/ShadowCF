@@ -194,6 +194,8 @@ texture = ExtResource("1_y0es3")
 sources/0 = SubResource("TileSetAtlasSource_3ajt3")
 
 [sub_resource type="Gradient" id="Gradient_y0es3"]
+offsets = PackedFloat32Array(0, 0.8373494, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3ajt3"]
 gradient = SubResource("Gradient_y0es3")
@@ -201,6 +203,8 @@ gradient = SubResource("Gradient_y0es3")
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y0es3"]
 
 [sub_resource type="Gradient" id="Gradient_gte0b"]
+offsets = PackedFloat32Array(0, 0.8373494, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.8373494, 0.8373494, 0.8373494, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_o12pq"]
 gradient = SubResource("Gradient_gte0b")
@@ -218,96 +222,7 @@ size = Vector2(14, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3vp7"]
 size = Vector2(127, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gte0b"]
-texture = ExtResource("1_y0es3")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-5:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-5:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-5:13/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-1:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_iqvem"]
-sources/0 = SubResource("TileSetAtlasSource_gte0b")
+[sub_resource type="TileSet" id="TileSet_kcpnl"]
 
 [node name="Room" type="Node2D" unique_id=491965579]
 
@@ -384,8 +299,8 @@ shape = SubResource("RectangleShape2D_f3dae")
 position = Vector2(0.5, -217)
 shape = SubResource("RectangleShape2D_f3vp7")
 
-[node name="Objects" type="TileMapLayer" parent="." unique_id=2459714]
-tile_set = SubResource("TileSet_iqvem")
+[node name="Objects" type="TileMapLayer" parent="." unique_id=1597375978]
+tile_set = SubResource("TileSet_kcpnl")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1878729696]
 color = Color(0.44291076, 0.44291076, 0.44291073, 1)
