@@ -2,9 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://ys0p417o0b4p" path="res://Player/player.tscn" id="1_e32lr"]
 [ext_resource type="PackedScene" uid="uid://bj2vnmc6uc8s6" path="res://Map/room.tscn" id="1_s60wc"]
+[ext_resource type="PackedScene" uid="uid://cney5jmqgr0pk" path="res://Crystal/Crystal.tscn" id="3_edujn"]
 
 [node name="game_scene" type="Node2D" unique_id=1628890661]
 
 [node name="Room" parent="." unique_id=491965579 instance=ExtResource("1_s60wc")]
 
 [node name="player" parent="." unique_id=507782529 instance=ExtResource("1_e32lr")]
+script = SubResource("GDScript_e32lr")
+mov_speed = 125.0
+
+[node name="Crystal" parent="." unique_id=838350972 instance=ExtResource("3_edujn")]
+position = Vector2(0, -215)
