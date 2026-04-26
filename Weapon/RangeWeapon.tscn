@@ -6,7 +6,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_etjfm"]
 radius = 2.3439496
 
-[node name="RangeWeapon" type="CharacterBody2D" unique_id=1771453149]
+[node name="RangeWeapon" type="Area2D" unique_id=1464652933]
+collision_layer = 2
 script = ExtResource("1_etjfm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1123271804]
@@ -17,4 +18,5 @@ texture = ExtResource("2_i1q3d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=129564249]
 scale = Vector2(0.025, 0.025)
 shape = SubResource("CircleShape2D_etjfm")
-disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
