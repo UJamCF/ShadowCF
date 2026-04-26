@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://y37yb4jb443j"]
+
+[ext_resource type="Script" uid="uid://chohqraluqpwu" path="res://Weapon/range_weapon.gd" id="1_etjfm"]
+[ext_resource type="Texture2D" uid="uid://btbd32n71ghcx" path="res://Weapon/rounded_8.png" id="2_i1q3d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_etjfm"]
+radius = 2.3439496
+
+[node name="RangeWeapon" type="CharacterBody2D" unique_id=1771453149]
+script = ExtResource("1_etjfm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1123271804]
+modulate = Color(0.14126751, 0, 0.25105116, 1)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("2_i1q3d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=129564249]
+scale = Vector2(0.025, 0.025)
+shape = SubResource("CircleShape2D_etjfm")
+disabled = true

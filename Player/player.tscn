@@ -1,21 +1,8 @@
 [gd_scene format=3 uid="uid://ys0p417o0b4p"]
 
+[ext_resource type="Script" uid="uid://bl5r0te7cihqi" path="res://Player/player.gd" id="1_gwnis"]
 [ext_resource type="Script" uid="uid://vujjpnqn6y2s" path="res://System/Health.gd" id="2_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://bkf3wleedpdm8" path="res://Images/Prototype_Character/prototype_character.png" id="2_btcbx"]
-
-[sub_resource type="GDScript" id="GDScript_l8h54"]
-script/source = "extends CharacterBody2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y8w33"]
 atlas = ExtResource("2_btcbx")
@@ -146,12 +133,14 @@ height = 14.0
 polygon = PackedVector2Array(3, 7, -3, 7, -3, 6, -4, 6, -4, 5, -5, 5, -5, 2, -4, 2, -4, -5, -3, -5, -3, -6, 3, -6, 3, -5, 4, -5, 4, 1, 3, 1, 3, 2, 4, 2, 4, 4, 3, 4)
 
 [node name="player" type="CharacterBody2D" unique_id=507782529]
-script = SubResource("GDScript_l8h54")
+script = ExtResource("1_gwnis")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=933280337]
 unique_name_in_owner = true
+modulate = Color(0.21837884, 0.21837887, 0.21837884, 1)
+texture_filter = 4
 sprite_frames = SubResource("SpriteFrames_58ae2")
-animation = &"walking"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="." unique_id=824815374]
@@ -160,13 +149,16 @@ shape = SubResource("CapsuleShape2D_ivevv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=566027507]
 position = Vector2(0, -2)
-zoom = Vector2(7.5, 7.5)
+zoom = Vector2(4, 4)
 process_callback = 0
 position_smoothing_enabled = true
-position_smoothing_speed = 8.0
+position_smoothing_speed = 4.0
 
-[node name="Node" type="Node" parent="." unique_id=1484230093]
+[node name="Health" type="Node" parent="." unique_id=1484230093]
 script = ExtResource("2_4ntmi")
 
+[node name="ShootCooldown" type="Timer" parent="." unique_id=1815423514]
+wait_time = 1.4209999999999998
+one_shot = true
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1142840082]
 occluder = SubResource("OccluderPolygon2D_4ntmi")
